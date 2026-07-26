@@ -1,0 +1,17 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "ru(winkeys)"
+    name[Group1] = "Russian (custom)";
+
+    // б → ,
+    key <AB08> { [ comma, semicolon ] };
+
+    // ю → .
+    key <AB09> { [ period, colon ] };
+
+    // . → б
+    key <AB10> { [ Cyrillic_be, Cyrillic_BE ] };
+
+    // \\ → ю
+    key <BKSL> { [ Cyrillic_yu, Cyrillic_YU ] };
+};
